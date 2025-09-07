@@ -1,16 +1,8 @@
--- Fire ProximityPrompts ve bildirim gönder
 for _, obj in pairs(workspace:GetDescendants()) do
     if obj.Name == "Dirt" and obj:IsA("BasePart") then
         for _, child in pairs(obj:GetDescendants()) do
             if child:IsA("ProximityPrompt") then
                 fireproximityprompt(child)
-                
-                -- Bildirim gönder
-                game.StarterGui:SetCore("SendNotification", {
-                    Title = "If you don't like the script I will fuck you",
-                    Text = "Made by Peace",
-                    Duration = 3
-                })
             end
         end
     end
